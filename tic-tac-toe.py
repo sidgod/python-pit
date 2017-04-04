@@ -1,5 +1,6 @@
 board = ["  " for x in range(9)]
 
+
 def print_board():
     row1 = "| {} | {} | {} |".format(board[0], board[1], board[2])
     row2 = "| {} | {} | {} |".format(board[3], board[4], board[5])
@@ -13,6 +14,7 @@ def print_board():
 
 choice = 0
 
+
 def player_move(icon):
     print("Your turn, player {}".format(icon))
     choice = int(input("Your move [1-9] ? ").strip())
@@ -21,6 +23,7 @@ def player_move(icon):
     else:
         print()
         print("That space is taken!")
+
 
 def is_victory(icon):
     if (board[0] == icon and board[1] == icon and board[2] == icon) or \
